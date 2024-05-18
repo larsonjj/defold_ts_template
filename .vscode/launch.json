@@ -1,0 +1,42 @@
+{
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "lua-local",
+      "request": "launch",
+      "stopOnEntry": false,
+      "verbose": false,
+      "internalConsoleOptions": "openOnSessionStart",
+      "program": {
+        "command": "${workspaceFolder}/build/defoldkit/dmengine"
+      },
+      "args": ["${workspaceFolder}/build/defoldkit/game.projectc"],
+      "windows": {
+        "program": {
+          "command": "${workspaceFolder}/build/defoldkit/dmengine.exe"
+        }
+      },
+      "scriptRoots": ["app", "src"],
+      "scriptFiles": ["app/**/*.lua", "app/**/*.script", "app/**/*.gui_script"]
+    },
+    {
+      "name": "Defold Kit",
+      "type": "lua-local",
+      "request": "launch",
+      "stopOnEntry": false,
+      "verbose": false,
+      "internalConsoleOptions": "openOnSessionStart",
+      "program": {
+        "command": "build/defoldkit/dmengine"
+      },
+      "args": ["build/defoldkit/game.projectc"],
+      "windows": {
+        "program": {
+          "command": "build\\defoldkit\\dmengine.exe"
+        },
+        "args": ["build\\defoldkit\\game.projectc"]
+      },
+      "preLaunchTask": "Defold Kit: Build to Launch"
+    }
+  ]
+}
